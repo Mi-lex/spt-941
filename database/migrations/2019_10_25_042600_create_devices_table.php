@@ -14,6 +14,7 @@ class CreateDevicesTable extends Migration
     public function up()
     {
         Schema::create('devices', function (Blueprint $table) {
+            $table->increments('id');
             $table->ipAddress('ip');
             $table->smallInteger('port')->unsigned();
             $table->smallInteger('device_address')->unsigned();
