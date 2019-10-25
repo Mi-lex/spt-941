@@ -18,8 +18,9 @@ class CreateDevicesTable extends Migration
             $table->ipAddress('ip');
             $table->smallInteger('port')->unsigned();
             $table->smallInteger('device_address')->unsigned();
+            $table->unique(['ip', 'device_address'], 'device_adress_ip');
+            $table->char('connection_type', 3);
             $table->timestamps();
-            $table->index(['ip', 'device_address']);
         });
     }
 
