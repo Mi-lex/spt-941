@@ -3,9 +3,25 @@
         <p class="menu-label">
             СПТ 941
         </p>
+        @php
+            $categories = [
+                '/' => [
+                    'text' => 'Установить соединение',
+                ],
+                'devices' => [
+                    'text' => 'Сохраненные устройства',
+                ]
+            ];
+        @endphp
         <ul class="menu-list">
-            <li><a href="" class="is-active">Установить соединение</a></li>
-            <li><a href="devices.html">Сохраненные устройства</a></li>
+            @foreach ($categories as $link => $category)
+                <li>
+                    <a href="{{ url($link) }}" 
+                        class="{{ Request::is($link) ? 'is-active' : null }}">
+                        {{ $category['text'] }}
+                    </a>
+                </li>
+            @endforeach
         </ul>
     </aside>
 </div>
