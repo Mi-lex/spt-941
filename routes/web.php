@@ -12,4 +12,7 @@
 */
 
 Route::get('/', 'MainController@home');
+
 Route::get('/devices', 'DeviceController@show');
+
+Route::post('/devices', 'DeviceController@store');
