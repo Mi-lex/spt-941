@@ -9,11 +9,11 @@
         <article class="media">
             <div class="media-content">
                 <div class="content">
-                    <p>
-                        <strong class="device-ip">{{ $device->ip }}</strong>
-                        <small>Добавлено: {{ $device->created_at->format('d-m-Y') }}</small>
+                    <p class="is-size-5">
+                        <strong class="device-ip">{{ $device->ip }}:{{ $device->port }}</strong>
+                        <small class="device-creation has-text-grey-light is-italic">Добавлено: {{ $device->created_at->format('d-m-Y') }}</small>
                         <br />
-                        Сетевой адресс устройства: {{ $device->device_address }}
+                        Тип соединение: <b>{{$device->connection_type}}</b>. Сетевой адресс: <b>{{ $device->device_address }}</b>
                     </p>
                 </div>
             </div>
