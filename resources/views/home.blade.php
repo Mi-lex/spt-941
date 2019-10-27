@@ -15,7 +15,7 @@
             </div>
         </article>
     @endforeach 
-    <form class="box" method="POST" action="/devices">
+    <form class="box" name="connection" method="POST" action="/">
         @csrf
         <div class="field has-text-centered">
             <img src="{{ asset('img/connection.png') }}" width="100" />
@@ -26,7 +26,7 @@
                     <label class="label is-medium">ip Адресс</label>
                     <div class="control has-icons-left">
                         <input name="ip" required minlength="7" maxlength="15" pattern="^([0-9]{1,3}\.){3}[0-9]{1,3}$"
-                            class="input is-medium" placeholder="10.155.165.96" />
+                            class="input is-medium" placeholder="10.155.165.96" value="10.155.165.96"/>
                         <span class="icon is-small is-left">
                             <i class="fa fa-server"></i>
                         </span>
@@ -35,7 +35,7 @@
                 <div class="field">
                     <label class="label is-medium">Порт</label>
                     <div class="control has-icons-left">
-                        <input name="port" type="number" min="0" max="65535" class="input is-medium" placeholder="40000" required />
+                        <input name="port" type="number" min="0" max="65535" class="input is-medium" placeholder="40000" required value="23"/>
                         <span class="icon is-small is-left">
                             <i class="fa fa-server"></i>
                         </span>
@@ -49,7 +49,7 @@
                     <label class="label is-medium">Сетевой адресс
                         устройства</label>
                     <div class="control has-icons-left">
-                        <input name="device_address" type="number" min="0" max="99" class="input is-medium" placeholder="63" required />
+                        <input name="device_address" type="number" min="0" max="99" class="input is-medium" placeholder="63" required value="23"/>
                         <span class="icon is-small is-left">
                             <i class="fa fa-sitemap"></i>
                         </span>
@@ -68,11 +68,12 @@
                 </div>
             </div>
         </div>
-        <div class="field">
-            <button class="button is-medium is-inverted is-outlined">
+        <div class="field deviceActions">
+            <button class="button is-medium is-inverted is-outlined saveDeviceBtn" data-action="/devices">
                 Сохранить устройство
             </button>
-            <input type="submit" class="button is-medium is-success" value="Мониторинг"/>
+            <input type="submit" class="button is-medium is-success monitoringDeviceBtn" 
+                value="Мониторинг" data-action="/monitoring"/>
         </div>
     </form>
 </div>
