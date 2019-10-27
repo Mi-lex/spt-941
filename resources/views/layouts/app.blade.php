@@ -38,5 +38,6 @@
 			</div>
 		</footer>
     </body>
-    <script src="{{ asset('js/app.js') }}"></script>
+	{{-- Additional scripts --}}
+	@yield('scripts')
 </html>

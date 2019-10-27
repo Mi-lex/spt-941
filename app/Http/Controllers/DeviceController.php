@@ -11,14 +11,18 @@ class DeviceController extends Controller
     {
         $devices = Device::orderByDesc('created_at')->get();
 
-        return view('devices', compact('devices'));
+        return view('pages.devices', compact('devices'));
     }
 
     public function store(DeviceConnectionPost $request)
     {
-        $device = new Device($request->all());
-        $device->save();
+        Device::create($request->all());
 
         return redirect('/devices');
+    }
+
+    public function monitoring()
+    {
+        return view('pages.monitoring');
     }
 }
