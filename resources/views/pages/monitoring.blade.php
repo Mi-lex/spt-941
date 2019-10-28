@@ -2,10 +2,12 @@
 
 @section('content')
     <h3 class="title is-3">Мониторинг</h3>
-    <form class="is-hidden">
+    <form class="is-hidden" name="connectionParamsForm">
+        @csrf
         <input type="hidden" name="ip" value={{ $connection['ip'] }}>
         <input type="hidden" name="port" value={{ $connection['port'] }}>
         <input type="hidden" name="connection_type" value={{ $connection['connection_type'] }}>
+        <input type="hidden" name="device_address" value={{ $connection['device_address'] }}>
     </form>
     <div class="box">
         <div class="columns">

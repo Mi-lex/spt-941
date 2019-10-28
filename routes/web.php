@@ -22,3 +22,7 @@ Route::delete('/devices/{device}', 'DeviceController@delete');
 Route::get('/monitoring/{device}', 'DeviceController@monitoringSavedDevice');
 
 Route::post('/monitoring', 'DeviceController@monitoring');
+
+Route::post('/params', 'DeviceController@device_params');
+
+Route::get('test/{device}', 'DeviceController@test_params');
