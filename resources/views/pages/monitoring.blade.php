@@ -2,6 +2,11 @@
 
 @section('content')
     <h3 class="title is-3">Мониторинг</h3>
+    <form class="is-hidden">
+        <input type="hidden" name="ip" value={{ $connection['ip'] }}>
+        <input type="hidden" name="port" value={{ $connection['port'] }}>
+        <input type="hidden" name="connection_type" value={{ $connection['connection_type'] }}>
+    </form>
     <div class="box">
         <div class="columns">
             <div class="column is-two-thirds">

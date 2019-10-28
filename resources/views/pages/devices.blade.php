@@ -5,7 +5,7 @@
 <h3 class="title is-3">Устройства</h3>
 
     @foreach ($devices as $device)
-        <div class="box" data-id="{{ $device->id }}">
+        <form class="box device-box" method="delete" action="/devices/{{ $device->id }}">
             <article class="media">
                 <div class="media-content">
                     <div class="content">
@@ -18,15 +18,15 @@
                     </div>
                 </div>
                 <div class="media-right">
-                    <button class="button is-medium is-success">
+                    <a class="button is-medium is-success" href="/monitoring/{{ $device->id }}">
                         Мониторинг
-                    </button>
-                    <button class="button is-medium is-warning">
+                    </a>
+                    <button class="button is-medium is-warning" data-method="delete">
                         Удалить
                     </button>
                 </div>
             </article>
-        </div> 
+        </form> 
     @endforeach
 
 @endsection

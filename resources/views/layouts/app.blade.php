@@ -20,7 +20,7 @@
 				<div class="columns">
 					{{-- Main navigation --}}
                     @include('layouts.aside')
-					<div class="column is-9">
+					<div class="column is-9 main-content">
                         {{-- Main content --}}
                         @yield('content')
 					</div>
