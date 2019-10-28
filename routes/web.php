@@ -17,4 +17,8 @@ Route::get('/devices', 'DeviceController@show');
 
 Route::post('/devices', 'DeviceController@store');
 
-Route::get('/monitoring', 'DeviceController@monitoring');
+Route::delete('/devices/{device}', 'DeviceController@delete');
+
+Route::get('/monitoring/{device}', 'DeviceController@monitoringSavedDevice');
+
+Route::post('/monitoring', 'DeviceController@monitoring');

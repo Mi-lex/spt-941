@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Device;
 use App\Http\Requests\DeviceConnectionPost;
+use Symfony\Component\HttpFoundation\Request;
 
 class DeviceController extends Controller
 {
@@ -21,8 +22,25 @@ class DeviceController extends Controller
         return redirect('/devices');
     }
 
-    public function monitoring()
+    public function delete(Device $device)
     {
-        return view('pages.monitoring');
+        $device->delete();    
+    }
+
+    public function monitoringSavedDevice(Device $device)
+    {
+        $connection = [];
+        $connection['ip'] = $device->ip;
+        $connection['port'] = $device->port;
+        $connection['connection_type'] = $device->connection_type;
+
+        return view('pages.monitoring', compact('connection'));
+    }
+
+    public function monitoring(DeviceConnectionPost $request)
+    {
+        $connection = $request->all();
+
+        return view('pages.monitoring', compact('connection'));
     }
 }
