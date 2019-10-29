@@ -161,7 +161,7 @@ class Spt_941
     private function write_params()
     {
         // sn - тепловая энергия ?
-        $param_names = ['sn', 't1', 't2', 'v1', 'm1', 'q'];
+        $param_names = ['sn', 't1', 't2', 'v', 'm', 'q'];
 
         $command = $this->commands['read_params'];
 

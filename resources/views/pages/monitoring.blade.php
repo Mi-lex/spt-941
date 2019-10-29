@@ -9,7 +9,7 @@
         <input type="hidden" name="connection_type" value={{ $connection['connection_type'] }}>
         <input type="hidden" name="device_address" value={{ $connection['device_address'] }}>
     </form>
-    <div class="box">
+    <div class="box monitoring-box">
         <div class="columns">
             <div class="column is-two-thirds">
                 <div class="columns is-multiline is-centered">
@@ -22,7 +22,7 @@
                                 Объем
                             </p>
                             <strong class="consumptionCard__value">
-                                -
+                                <span class="digit value-v">-</span>
                                 <small class="device__units">м<sup>3</sup></small>
                             </strong>
                         </div>
@@ -35,7 +35,7 @@
                                 Масса
                             </p>
                             <strong class="consumptionCard__value">
-                                -
+                                <span class="digit value-m">-</span>
                                 <small class="device__units">т</small>
                             </strong>
                         </div>
@@ -48,7 +48,7 @@
                                 Температура 1
                             </p>
                             <strong class="consumptionCard__value">
-                                -
+                                <span class="digit value-t1">-</span>
                                 <small class="device__units">°C</small>
                             </strong>
                         </div>
@@ -61,7 +61,7 @@
                                 Температура 2
                             </p>
                             <strong class="consumptionCard__value">
-                                -
+                                <span class="digit value-t2">-</span>
                                 <small class="device__units">°C</small>
                             </strong>
                         </div>
@@ -74,15 +74,15 @@
                                 Тепловая энергия
                             </p>
                             <strong class="consumptionCard__value">
-                                -
-                                <small class="device__units">кВт-ч</small>
+                                <span class="digit value-sn">-</span>
+                                <small class="device__units">ГКал</small>
                             </strong>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="column is-one-third">
-                <button class="button is-medium is-success is-fullwidth">
+                <button class="button is-medium is-success is-fullwidth monitoringBtn">
                     <!-- <span class="icon">
                             <i
                                 class="fa fa-spinner fa-pulse"

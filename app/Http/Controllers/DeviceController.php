@@ -24,7 +24,7 @@ class DeviceController extends Controller
 
     public function delete(Device $device)
     {
-        $device->delete();    
+        $device->delete();
     }
 
     public function monitoringSavedDevice(Device $device)
@@ -50,6 +50,8 @@ class DeviceController extends Controller
         $device = new Spt_941($request->all());
 
         $deviceParams = $device->collect_data();
+
+        return $deviceParams;
     }
 
     public function test_params(Device $device)
@@ -65,7 +67,7 @@ class DeviceController extends Controller
         $deviceConnection = new Spt_941($connection);
 
         $deviceParams = $deviceConnection->collect_data();
-        
+
         dd($deviceParams);
     }
 }
