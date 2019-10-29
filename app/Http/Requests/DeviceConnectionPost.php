@@ -24,9 +24,9 @@ class DeviceConnectionPost extends FormRequest
     public function rules()
     {
         return [
-            'ip' => 'required|ip|unique:devices,ip,NULL,NULL,device_address, ' . $this['device_address'],
+            'ip' => 'required|ip',
             'port' => 'required|gt:0|max:65535',
-            'device_address' => 'required|gte:0|max:99|unique:devices,device_address,NULL,NULL,ip, ' . $this['ip'],
+            'device_address' => 'required|gte:0|max:99',
             'connection_type' => 'required|in:UDP,TCP'
         ];
     }
