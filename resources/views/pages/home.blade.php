@@ -73,7 +73,7 @@
                 Сохранить устройство
             </button>
             <input type="submit" class="button is-medium is-success monitoringDeviceBtn" 
-                data-action="/monitoring"/>
+                data-action="/monitoring" value="Подключиться"/>
         </div>
     </form>
 </div>
