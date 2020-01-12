@@ -7,9 +7,9 @@
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         {{-- Bulma css. Font-awesome + main.css --}}
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="/css/app.css">
         {{-- Icons --}}
-        <link rel="icon" sizes="32x32" href="./img/favicon.png" type="image/png">
+        <link rel="icon" sizes="32x32" ref="/img/favicon.png" type="image/png">
         {{-- Additional libraries or css code --}}
         @yield('libraries')
 	</head>

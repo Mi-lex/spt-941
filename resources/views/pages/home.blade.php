@@ -17,7 +17,7 @@
     @endforeach 
     <form class="box" name="connection" method="POST" action="/">
         @csrf
-        <div clas="field has-text-centered">
+        <div class="field has-text-centered">
             <img src="{{ asset('img/connection.png') }}" width="100" />
         </div>
         <div class="field is-horizontal">
