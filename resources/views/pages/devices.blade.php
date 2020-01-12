@@ -32,5 +32,5 @@
 @endsection
 
 @section('scripts')
-	<script src="{{ asset('js/pages/devices.js') }}"></script>
+	<script src="./js/pages/devices.js"></script>
 @endsection
