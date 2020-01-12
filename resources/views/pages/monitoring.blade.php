@@ -99,5 +99,5 @@
 @endsection
 
 @section('scripts')
-	<script src="./js/pages/monitoring.js"></script>
+	<script src="/js/pages/monitoring.js"></script>
 @endsection
